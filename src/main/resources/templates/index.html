@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html th:replace="layout/masterlayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+<div class="container mt-5">
+  <h1>Spring Security Home Page.</h1>
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">John</h3>
+            <h4 class="card-subtitle">SUPER-ADMIN</h4>
+          <p class="text-muted">username.john</p>
+          <p class="text-muted">password.john</p>
+      </div>
+
+  </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Emma</h3>
+          <h4 class="card-subtitle">EMPLOYEE-ADMIN</h4>
+          <p class="text-muted">username.emma</p>
+          <p class="text-muted">password.emma</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Lucas</h3>
+          <h4 class="card-subtitle">CUSTOMERS-READ</h4>
+          <p class="text-muted">username.lucas</p>
+          <p class="text-muted">password.lucas</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Tom</h3>
+          <h4 class="card-subtitle">NO_ROLES</h4>
+          <p class="text-muted">username.tom</p>
+          <p class="text-muted">password.tom</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

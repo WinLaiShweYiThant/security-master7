@@ -28,9 +28,10 @@ public class SecurityConfig {
         expressionHandler.setRoleHierarchy(roleHierarchy);
         return expressionHandler;
     }
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http)throws Exception{
         http.authorizeHttpRequests()
-                .requestMatchers("/home","/","/bootstrap/**")
+                .requestMatchers("/","/home","/bootstrap/**")
 
                 .permitAll()
                 .anyRequest().authenticated();
@@ -62,7 +63,7 @@ public class SecurityConfig {
 
         var william=User.withUsername("william")
                 .password("william")
-                .roles(DEPARTMENTS_CREATE,DEPARTMENTS_DELETE)
+                .roles(DEPARTMENTS_CREATE,DEPARTMENTS_READ)
                 .build();
         var lucas=User.withUsername("lucas")
                 .password("lucas")

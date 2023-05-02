@@ -5,6 +5,7 @@ import com.example.securitymaster.ds.Customer;
 import com.example.securitymaster.security.annonation.customer.CustomersCreate;
 import com.example.securitymaster.security.annonation.customer.CustomersDelete;
 import com.example.securitymaster.security.annonation.customer.CustomersRead;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,7 @@ import static com.example.securitymaster.security.SecurityRoles.CUSTOMERS_DELETE
 import static com.example.securitymaster.security.SecurityRoles.ROLES_PREFIX;
 
 @Controller
-@RequestMapping("/customers")
+@RequestMapping("/customer")
 public class CustomerController {
 
     @Autowired
@@ -39,7 +40,7 @@ public class CustomerController {
     }
     @PostMapping("/customer-form")
     @CustomersCreate
-    public String customerCreate(Customer customer, BindingResult result){
+    public String customerCreate(@Valid Customer customer, BindingResult result){
         if (result.hasErrors()) {
 
             return "customerform";

@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class indexController {
-    @GetMapping({"/","/home"})
-    public String index(){
-        return "index";
+@RequestMapping("/account")
+public class AccountController {
+    @GetMapping("/accounts")
+    public String listAccount(){
+        return "account";
     }
 }
